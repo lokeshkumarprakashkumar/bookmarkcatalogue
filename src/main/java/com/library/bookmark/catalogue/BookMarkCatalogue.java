@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * BookMarkCatalogue is the bootstrap of the application.
  * 
- * @author lprakash
+ * @author lokesh
  */
 @SpringBootApplication
 public class BookMarkCatalogue {

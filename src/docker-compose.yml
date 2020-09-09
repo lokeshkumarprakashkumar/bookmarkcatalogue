@@ -1,0 +1,21 @@
+version: '3.5'
+services: 
+
+  bmc-mariadb:
+    image: mariadb:latest
+    container_name: bmc-mariadb
+    environment:
+    - MYSQL_ROOT_PASSWORD=topsecret123
+    - MYSQL_DATABASE=bookmarkcatalogue
+    ports:
+    - 3306:3306    
+    networks:
+    - bmcnet
+    
+networks:
+  bmcnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.18.0.0/16
